@@ -1,0 +1,12 @@
+[Unit]
+Description=Service to control a PWM fan to keep the CPU at optimal temperatures.
+
+[Service]
+User=root
+Group=root
+ExecStart=/usr/bin/python3 /home/bigjo/rpi-pwm-fan/main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
